@@ -1,0 +1,25 @@
+    
+    var allowed_pages = ["#home", "#menu"];
+    var data = {
+        get currentPage(){
+            return 1 //this.currentPage
+        },
+       
+        set currentPage(value){
+            console.trace()
+            this.currentPage = value;
+            debugger;
+            document.querySelector("[data-page='"+ this.currentPage +"']").style.display = "block";
+           /*if(allowed_pages.indexOf(value) != -1){
+                this.currentPage = value;
+                //window.location.hash = value;
+                document.querySelector("[data-page='"+ this.currentPage +"']").style.display = "block";
+                return;     
+            }else{
+                this.currentPage = "#home";
+                window.location.hash = "#home"
+            }*/
+        },
+        currentPage: ""
+    }
+     data.currentPage = window.location.hash
